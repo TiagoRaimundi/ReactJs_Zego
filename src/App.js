@@ -32,17 +32,7 @@ export default function App() {
         : ZegoUIKitPrebuilt.Audience;
 
   let sharedLinks = [];
-  if (role === ZegoUIKitPrebuilt.Host || role === ZegoUIKitPrebuilt.Cohost) {
-    sharedLinks.push({
-      name: 'Join as co-host',
-      url:
-        window.location.protocol + '//' +
-        window.location.host + window.location.pathname +
-        '?roomID=' +
-        roomID +
-        '&role=Cohost',
-    });
-  }
+
   sharedLinks.push({
     name: 'Join as audience',
     url:
@@ -53,8 +43,8 @@ export default function App() {
       '&role=Audience',
   });
   // generate Kit Token
-  const appID = ///////////
-  const serverSecret = ////////////
+  const appID = 1698910691;
+  const serverSecret = "19ce6d3e8c8f352a9e310c04d58ebada";
   const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(appID, serverSecret, roomID, randomID(5), randomID(5));
 
 
