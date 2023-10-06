@@ -34,7 +34,7 @@ export default function App() {
   let sharedLinks = [];
 
   sharedLinks.push({
-    name: 'Join as audience',
+    name: 'Convidar nova pessoas',
     url:
       window.location.protocol + '//' +
       window.location.host + window.location.pathname +
@@ -43,8 +43,8 @@ export default function App() {
       '&role=Audience',
   });
   // generate Kit Token
-  const appID = 1698910691;
-  const serverSecret = "19ce6d3e8c8f352a9e310c04d58ebada";
+  const appID = 1340597198;
+  const serverSecret = "e5bbd71eb64154501ffa72ce3f0cd51f";
   const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(appID, serverSecret, roomID, randomID(5), randomID(5));
 
 
@@ -61,6 +61,7 @@ export default function App() {
           role,
         },
       },
+      showRoomTimer: true,
       sharedLinks,
     });
   };
